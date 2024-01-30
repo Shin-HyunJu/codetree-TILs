@@ -1,10 +1,10 @@
 const fs = require("fs");
 
-let [a,b,c] = fs.readFileSync(0).toString().trim().split(" ").map(Number);
+let [list] = fs.readFileSync(0).toString().trim().split(" ").map(Number);
 
 let answer1, answer2;
 
-if(a === b && a === c) {
+if(list[0] === Math.min(list)) {
     answer1 = 1;
 } else {
     answer1 = 0;
