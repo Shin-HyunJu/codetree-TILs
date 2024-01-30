@@ -1,19 +1,8 @@
 const fs = require("fs");
 
-let list = fs.readFileSync(0).toString().trim().split(" ").map(Number);
+let [a,b,c] = fs.readFileSync(0).toString().trim().split(" ").map(Number);
 
-let answer1, answer2;
-
-if(list[0] === Math.min(...list)) {
-    answer1 = 1;
-} else {
-    answer1 = 0;
-}
-
-if(list[0]===list[1] && list[1]===list[2]) {
-    answer2 = 1;
-} else {
-    answer2 = 0;
-}
+let answer1 = a === Math.min(a,b,c) ? 1:0;
+let answer2 = (a === b && b === c) ? 1: 0;
 
 console.log(answer1,answer2);
