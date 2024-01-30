@@ -4,7 +4,7 @@ let list = fs.readFileSync(0).toString().trim().split(" ").map(Number);
 
 let answer1, answer2;
 
-if(list[0] === Math.min(list)) {
+if(list[0] === Math.min(...list)) {
     answer1 = 1;
 } else {
     answer1 = 0;
