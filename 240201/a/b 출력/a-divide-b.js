@@ -1,11 +1,15 @@
 const fs = require("fs");
-const [a,b] = fs.readFileSync(0).toString().split(" ").map(Number);
+let [a,b] = fs.readFileSync(0).toString().split(" ").map(Number);
 
-let result = (a/b);
-let length = result.toString().length;
+let result = parseInt(a/b);
+result += '.'
+a = (a%b)*10;
 
-for(let i=length; i<=21; i++){
-    result += '0';
+for(let i=0; i<20; i++){
+    let share = parseInt(a/b);
+    let rest = a%b;
+    a = rest*10;
+    result+=share;
 }
 
-console.log(result);
+console.log(result)
