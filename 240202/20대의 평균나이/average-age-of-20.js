@@ -3,7 +3,7 @@ const input = fs.readFileSync(0, 'utf-8').toString().trim().split('\n').map(Numb
 let i = 0, sum = 0; 
 
 while (true) {
-    if (input[i] >= 30) {
+    if (input[i] >= 30 || input[i] <= 19) {
         break;
     }
     sum += input[i];
