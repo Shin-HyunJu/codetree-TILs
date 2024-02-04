@@ -10,9 +10,9 @@ for (let i=0; i<n; i++) {
     console.log(str);
 }
 
-for (let i=n-1; i>0; i--) {
+for (let i=n-2; i>=0; i--) {
     str = "";
-    for (let j=0; j<i; j++) {
+    for (let j=0; j<i+1; j++) {
         str += "*"+" "
     } 
     console.log(str);
