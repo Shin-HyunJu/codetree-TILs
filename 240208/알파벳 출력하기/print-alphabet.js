@@ -8,7 +8,7 @@ for (let i = 0; i < n; i++) {
     for (let j = 0; j <= i; j++) {
         str += String.fromCharCode(65+cnt);
         cnt++;
-        if (cnt === 16) cnt = 0;
+        if (cnt === 26) cnt = 0;
     }
     console.log(str);
 }
