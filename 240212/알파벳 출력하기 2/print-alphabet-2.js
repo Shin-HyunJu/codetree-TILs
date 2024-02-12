@@ -10,6 +10,9 @@ for (let i = 0; i < n; i++) {
         else {
             str += String.fromCharCode(charCode) + ' ';
             charCode++;
+            if (charCode === 91) {
+                charCode = 65;
+            }
         }
     }
     console.log(str);
