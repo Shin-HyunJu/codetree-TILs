@@ -5,8 +5,7 @@ let str = '';
 
 for (let i = 2; i <= n; i++) {
     is_prime = true;
-    for (let j = 2; j < n; j++) {
-        if (i === 2) continue;
+    for (let j = 2; j < i; j++) {
         if (i % j === 0) is_prime = false;
     }
     if (is_prime) {
