@@ -10,7 +10,7 @@ for (let i = start; i <= end; i++) {
             sum++;
         }
     }
-    if (sum > 3) {
+    if (sum === 3) {
         cnt++;
     }
 }
