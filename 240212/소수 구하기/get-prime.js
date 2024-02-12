@@ -1,16 +1,15 @@
 const fs = require('fs');
 const n = Number(fs.readFileSync(0).toString().trim());
-let sum = 0;
+let is_prime = true;
 let str = '';
 
-for (let i = 1; i <= n; i++) {
-    sum = 0;
-    for (let j = 1; j <= n; j++) {
-        if (i % j === 0) {
-            sum ++;
-        }
+for (let i = 2; i <= n; i++) {
+    is_prime = true;
+    for (let j = 2; j < n; j++) {
+        if (i === 2) continue;
+        if (i % j === 0) is_prime = false;
     }
-    if (sum === 2) {
+    if (is_prime) {
         str += i + ' ';        
     }
 }
