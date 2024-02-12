@@ -1,9 +1,6 @@
 const fs = require('fs');
-const arr = fs.readFileSync(0).toString().trim().split(' ').map(Number);
+const arr = fs.readFileSync(0).toString().trim();
 
-if (arr.length < 10) {
-    arr.reverse();
-    console.log(arr.slice(1).join(' '));
-} else {
-    console.log(arr.reverse().join(' '));
-}
+let tempArr = arr.split(' 0');
+
+console.log(tempArr[0].split(' ').reverse().join(' '));
