@@ -5,7 +5,7 @@ let cnt = 0;
 n = Number(n);
 arr = arr.split(' ').map(Number);
 
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < n; i++) {
     if (arr[i] === 2) cnt++;
     if (cnt === 3) {
         console.log(i+1);
