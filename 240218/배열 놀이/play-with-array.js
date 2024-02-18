@@ -3,19 +3,15 @@ const input = fs.readFileSync(0).toString().trim().split(`\n`);
 const [n, q] = input[0].split(' ').map(Number);
 const arr = input[1].split(' ').map(Number);
 
-for (let i = 2; i < q+2; i++) {
-    if (i >= input.length) {
-        i = input.length - 1;
-    } else {
-        input[i] = input[i].split(' ').map(Number);
-    }
+for (let i = 2; i < input.length; i++) {
+    input[i] = input[i].split(' ').map(Number);
     switch(input[i][0]) {
         case 1:
             console.log(arr[input[i][1]-1])
         break;
         case 2:
             let ans = arr.indexOf(input[i][1]);
-            console.log(ans > 0 ? ans+1 : 0);
+            console.log(ans > -1 ? ans+1 : 0);
         break;
         case 3:
             let str = ''
