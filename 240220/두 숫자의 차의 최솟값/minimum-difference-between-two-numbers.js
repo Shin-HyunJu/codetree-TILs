@@ -6,11 +6,9 @@ arr = arr.split(' ').map(Number);
 let value = Number.MAX_SAFE_INTEGER;
 
 for (let i = 0; i < n-1; i++) {
-    for (let j = i+1; j < n; j++) {
-        if (value > Math.abs(arr[i] - arr[j])) {
-            value = Math.abs(arr[i] - arr[j]);
-        }
-    }   
+    if (value > arr[i+1] - arr[i]) {
+        value = arr[i+1] - arr[i];
+    }
 }
 
 console.log(value);
