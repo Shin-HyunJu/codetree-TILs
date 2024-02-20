@@ -9,5 +9,5 @@ for (row of input) {
         let elemCode = elem.charCodeAt() - diff;
         str += `${String.fromCharCode(elemCode)} `;
     }
-    console.log(str);
+    console.log(str.trim());
 }
