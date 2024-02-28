@@ -12,7 +12,7 @@ for (elem of input) {
 for (let i = 0; i < n; i++) {
     let str = '';
     for (let j = 0; j < m; j++) {
-        if (inputArr[i+1][j] !== inputArr[i+n+1][j]) {
+        if (inputArr[i+1][j] !== inputArr[i+m+1][j]) {
             arr2d[i][j] = 1;
         }
         str += arr2d[i][j] + ' ';
