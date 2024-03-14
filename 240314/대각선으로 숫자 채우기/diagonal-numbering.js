@@ -30,7 +30,9 @@ while(l < n) {
     }
 }
 
-arr2d[n-1][m-1] = cnt;
+if(arr2d[n-1][m-1] === 0) {
+    arr2d[n-1][m-1] = cnt;
+} 
 
 
 let str = '';
