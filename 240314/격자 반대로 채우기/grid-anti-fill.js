@@ -3,9 +3,10 @@ const n = Number(fs.readFileSync(0).toString().trim());
 let arr2d = Array(n).fill(0).map(() => Array(n).fill(0));
 let cnt = 1;
 let str = '';
+let flag = true;
 
 for (let i = n - 1; i >= 0; i--) {
-    if (i % 2 !== 0) {
+    if (flag) {
         for (let j = n - 1; j >= 0; j--) {
             arr2d[j][i] = cnt;
             cnt++;
@@ -16,6 +17,7 @@ for (let i = n - 1; i >= 0; i--) {
             cnt++;
         }
     }
+    flag = !flag;
 }
 
 for (let i = 0; i < n; i++) {
