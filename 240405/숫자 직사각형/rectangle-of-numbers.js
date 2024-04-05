@@ -1,19 +1,20 @@
 const fs = require('fs');
-let input = fs.readFileSync(0).toString().trim().split('\n');
-let arr2d = [];
-let sum = 0;
+let [n, m] = fs.readFileSync(0).toString().trim().split(' ').map(Number);
 
-for (elem of input) {
-    elem = elem.split(' ').map(Number);
-    arr2d.push(elem);
+let array2d = Array(n).fill(0).map(() => Array(m).fill(0));
+let num = 1;
+
+for (let i = 0; i < n; i++) {
+    for (let j = 0; j < m; j++) {
+        array2d[i][j] = num;
+        num++;
+    }    
 }
 
-for (let i = 0; i < 4; i++) {
-    for (let j = 0; j <= i; j++) {
-        sum += arr2d[i][j];
-    }   
+for (let row of array2d) {
+    let str = '';
+    for (let col of row) {
+        str += col + ' ';
+    } 
+    console.log(str);
 }
-
-console.log(sum);
-
-let prac = Array(n).fill(0).map(() => Array(n).fill(0))
