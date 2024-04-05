@@ -5,9 +5,8 @@ let [n, m] = input[0].split(' ').map(Number);
 let arr2d = Array(n).fill(0).map(() => Array(n).fill(0));
 
 for (let i = 0; i < m; i++) {
-    input[i+1] = input[i+1].split(' ').map(Number); 
-    r = input[i+1][0];
-    c = input[i+1][1];
+    r = Number(input[i+1].split(" ")[0])
+    c = Number(input[i+1].split(" ")[1])
     arr2d[r-1][c-1] = 1;
 }
 
