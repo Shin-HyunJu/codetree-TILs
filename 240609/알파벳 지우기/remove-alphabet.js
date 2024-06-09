@@ -1,5 +1,5 @@
 const fs = require('fs');
-let input = fs.readFileSync(0).toString().trim().split(' ');
+let input = fs.readFileSync(0).toString().trim().split('\n');
 let sum = 0;
 
 for (let elem of input) {
