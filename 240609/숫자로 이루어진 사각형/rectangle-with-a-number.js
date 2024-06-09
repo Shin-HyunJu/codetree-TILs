@@ -3,10 +3,9 @@ function printRect(n) {
     for (let i=0; i<n; i++) {
         for (let j=0; j<n; j++) {
             process.stdout.write(num+" ");
-            if (num === 9) {
+            num++;
+            if (num === 10) {
                 num = 1;
-            } else {
-                num++;
             } 
         }
         process.stdout.write('\n');
