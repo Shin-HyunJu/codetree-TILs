@@ -6,7 +6,7 @@ function sumDiv(n) {
     for(let i=1; i<=n; i++) {
         sum += i;
     }
-    console.log(sum/10);
+    console.log(Math.floor(sum/10));
 }
 
 sumDiv(num);
