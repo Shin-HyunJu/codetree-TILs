@@ -3,7 +3,7 @@ let [a, b] = fs.readFileSync(0).toString().trim().split(' ').map(Number);
 let sum = 0;
 
 for (let i = a; i <= b; i++) {
-    if (isPrime(i)) {
+    if (a !== 1 && b !== 1 && isPrime(i)) {
         sum += i;
     }
 }
