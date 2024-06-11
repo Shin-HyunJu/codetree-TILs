@@ -18,6 +18,9 @@ function arithmetic(a, o, c) {
         case '*':
         console.log(a, o, c, '=', a * c);
         break;
+        default:
+        console.log('False');
+        break;
     }
 }
 
