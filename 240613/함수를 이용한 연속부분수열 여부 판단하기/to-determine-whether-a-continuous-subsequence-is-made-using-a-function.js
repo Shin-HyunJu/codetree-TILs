@@ -1,26 +1,29 @@
 const fs = require("fs");
 let input = fs.readFileSync(0).toString().trim().split('\n'); 
 
+let [al, bl] = input[0].split(' ').map(Number);
 let a = input[1].split(' ').map(Number);
 let b = input[2].split(' ').map(Number);
 
-function isSubsequence(a, b) {
-    for (let i = 0; i <= (a.length-b.length); i++){
-        let count = 0;
-        for (let j = 0; j < b.length; j++) {
-            if( b[j] === a[i+j] ) {
-                count++;
-            }
-        }        
-        if ( count === b.length ) {
+function isSame(i) {
+    for (let j = 0; j < bl; j++) {
+        if (b[j] !== a[i+j]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function isSubsequence() {
+    for (let i = 0; i <= (al-bl); i++){
+        if (isSame(i)) {
             return true;
         }
     }
     return false;
-
 };
 
-if (isSubsequence(a, b)) {
+if (isSubsequence()) {
     console.log('Yes');
 } else {
     console.log('No');
