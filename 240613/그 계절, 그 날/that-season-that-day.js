@@ -1,5 +1,5 @@
 const fs = require("fs");
-let [y, m, d] = fs.readFileSync(0).toString().trim().split(' ');
+let [y, m, d] = fs.readFileSync(0).toString().trim().split(' ').map(Number);
 
 function leapYear() {
     if(y % 4 !== 0) return false; 
@@ -14,6 +14,7 @@ function printSeason() {
         console.log('Summer');
     } else if ([9, 10, 11].includes(m)) {
         console.log('Fall');
+
     } else {
         console.log('Winter');
     }
