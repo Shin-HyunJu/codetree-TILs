@@ -2,11 +2,16 @@ const fs = require('fs');
 let [a, b] = fs.readFileSync(0).toString().trim().split(' ').map(Number);
 
 function operationValue(a, b) {
-  let min, max = 0;
-  min = Math.min(a, b);
-  max = Math.max(a, b);
 
-  return [(min * 2), (max +25)];
+  if (a > b) {
+    a += 25;
+    b *= 2;
+  } else {
+    b += 25;
+    a *= 2;
+  }
+
+  return [a, b];
 }
 
 [a, b] = operationValue(a, b);
