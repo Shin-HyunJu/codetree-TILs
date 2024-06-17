@@ -2,12 +2,10 @@ const fs = require('fs');
 let a = fs.readFileSync(0).toString().trim();
 
 function differentAlphabet(a) {
-    for (let i = 0; i < a.length; i++) {
-        for (let j = i+1; j < a.length; j++) {
-            if (a[i] !== a[j]) {
-                return true;
-            }
-        }        
+    for (let i = 1; i < a.length; i++) {
+        if (a[0] !== a[i]) {
+            return true;
+        }
     }
     return false;
 }
