@@ -11,4 +11,4 @@ function printHello(n) {
     console.log('HelloWorld');
 }
 
-printHello(4);
+printHello(n);
