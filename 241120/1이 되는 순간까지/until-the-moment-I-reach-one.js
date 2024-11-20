@@ -1,20 +1,15 @@
 const fs = require("fs");
 let n = Number(fs.readFileSync(0).toString().trim());
-let count = 0;
 
 function division(n) {
     if(n === 1) {
-        console.log(count);
-        return;
+        return 0;
     }
-
     if(n % 2 === 0) {
-        n = n / 2;
+        return  division(n / 2) + 1;
     } else {
-        n = parseInt(n / 3);
+        return division(parseInt(n / 3)) + 1;
     }
-    count++;
-    division(n);
 }
 
-division(n);
+console.log(division(n));
