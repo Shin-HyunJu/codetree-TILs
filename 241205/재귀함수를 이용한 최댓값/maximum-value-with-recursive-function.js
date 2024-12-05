@@ -8,7 +8,10 @@ function findMax(n) {
     if (n === 1) {
         return list[0];
     }
-    return findMax(n-1) > list[n-1] ? findMax(n-1) : list[n-1]; 
+
+    let min = findMax(n-1);
+
+    return min > list[n-1] ? min : list[n-1]; 
 }
 
 console.log(findMax(n));
