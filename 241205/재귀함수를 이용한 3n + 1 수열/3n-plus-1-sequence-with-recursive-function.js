@@ -1,21 +1,16 @@
 const fs = require("fs");
 const n = Number(fs.readFileSync(0).toString().trim());
-let count = 0;
 
 function recursion(n) {
-    if (n === 1) return 1;
+    if (n === 1) return 0;
     else if (n % 2 === 0) {
-        count++;
-        return recursion(n / 2);
+        return recursion(n / 2) + 1;
     } else{
-        count++;
-        return recursion(3 * n + 1); 
+        return recursion(3 * n + 1) + 1; 
     } 
 }
 
-recursion(n);
-
-console.log(count);
+console.log(recursion(n));
 
 
 
