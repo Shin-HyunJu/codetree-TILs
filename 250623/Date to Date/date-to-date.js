@@ -10,7 +10,7 @@ function calDate(m, d) {
     
     let returnVal = 0;
 
-    for (let i = 1; i <= m; i ++) {
+    for (let i = 1; i < m; i ++) {
         returnVal += monthDate[i];
     }
 
@@ -19,4 +19,4 @@ function calDate(m, d) {
     return returnVal;
 }
 
-console.log(calDate(m2, d2) - calDate(m1,d1));
+console.log(calDate(m2, d2) - calDate(m1,d1) + 1);
