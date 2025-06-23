@@ -10,4 +10,8 @@ function calculateMin(d, h, m) {
     return (d - 1) * 24 * 60 + h * 60 + m;
 }
 
-console.log(calculateMin(A, B, C) - calculateMin(11, 11, 11))
+if (calculateMin(A, B, C) - calculateMin(11, 11, 11) > 0) {
+    console.log(calculateMin(A, B, C) - calculateMin(11, 11, 11));
+} else {
+    console.log(-1);
+}
