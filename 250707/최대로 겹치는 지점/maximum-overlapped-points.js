@@ -8,7 +8,7 @@ for (let i = 1; i <= n; i++) {
 }
 
 // Please Write your code here.
-let array = new Array(100).fill(0);
+let array = new Array(101).fill(0);
 
 for(let i = 0; i < n; i++) {
     for(let j = segments[i][0]; j <= segments[i][1]; j++) {
